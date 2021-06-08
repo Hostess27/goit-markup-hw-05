@@ -171,7 +171,7 @@ svg {
 
 .link-border{
     position: relative;
-    display: inline-block;
+    
 }
 .site-nav .link-border::after {
     position: absolute;
