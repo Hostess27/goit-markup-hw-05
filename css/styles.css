@@ -166,6 +166,7 @@ svg {
 
 .main-nav .current {
     color: var(--accent-color);
+    
 }
 
 .auth-nav-link {
