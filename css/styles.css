@@ -425,8 +425,8 @@ svg {
 
 .work-product .product-name {
     position: absolute;
+    box-sizing: content-box;
     bottom: 0;
-    z-index: 1;
 
     color: var(--white);
     width: 199px;
@@ -437,20 +437,17 @@ svg {
     text-align: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    
 
     background: rgba(47, 48, 58, 0.8);
     padding: 27px 85px 27px 85px;
+
+
 }
 
-/* .product-name::after{
-    content: '';
-    position: absolute;
-    top: 50%;
-    bottom: 50%;
-
-    
-} */
+.product-name{
+    display: inline-block;
+    white-space: nowrap; 
+}
 
 .work .work-item:not(:last-child) {
     margin-right: 30px;
@@ -668,3 +665,58 @@ svg {
 
     margin-top: 0;
 }
+
+/* Модалка */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    min-width: 528px;
+    min-height: 581px;
+
+    background: var(--white);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    
+}
+
+.modal-button {
+    
+    width: 30px;
+    height: 30px;
+
+    background-color: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    margin-top: 8px;
+    margin-right: 8px;
+
+
+}
+
+.modal-icons{
+    fill: var(--title-text-color);
+}
+
+
