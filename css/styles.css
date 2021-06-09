@@ -32,7 +32,6 @@ body {
     text-decoration: none;
     outline: none;
     display: inline-block;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 a {
@@ -51,21 +50,17 @@ a {
 
     margin-left: auto;
     margin-right: auto;
-
-    /* outline: 2px solid tomato;ы */
 }
 .button {
     cursor: pointer;
     outline: none;
     border: none;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
-
-    /* background-color: tomato; */
 }
 .section.no-padding {
     padding-top: 0;
@@ -106,7 +101,6 @@ svg {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-
 
 /* Шапка и подвал */
 
@@ -158,8 +152,8 @@ svg {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
-
     color: var(--title-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .link:active,
 .site-nav .link:focus,
@@ -190,6 +184,7 @@ svg {
     display: flex;
     align-items: center;
     color: var(--primary-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .auth-nav-link:hover,
@@ -214,10 +209,11 @@ svg {
 }
 
 .contact {
-    color: var(--title-text-color);
     font-size: 14px;
     line-height: 1.14;
     font-weight: 500;
+
+    color: var(--title-text-color);
 }
 
 .contact .mail:focus,
@@ -250,32 +246,30 @@ svg {
     font-size: 14px;
     line-height: 1.71;
 
+    margin-right: 70px;
+
     color: var(--white);
     display: inline-block;
     margin-top: 0;
     margin-bottom: 9px;
 }
 
+
 .contact .contact-mail-down {
+    display: inline-block;
     font-size: 14px;
     line-height: 1.71;
 
-    color: var(--white-link);
-    display: inline-block;
     margin-top: 0;
     margin-bottom: 9px;
+    color: var(--white-link);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .flex-footer {
     display: flex;
     align-items: baseline;
-}
-
-.adds {
-    margin-right: 70px;
-}
-
-.plea {
 }
 
 .plea-title {
@@ -304,13 +298,16 @@ svg {
 
 .social-link {
     display: inline-flex;
-    width: 44px;
-    height: 44px;
     align-items: center;
     justify-content: center;
+
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
 
     background-color: rgba(255, 255, 255, 0.1);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social .social-link:hover,
@@ -339,8 +336,6 @@ svg {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-
-    /* outline: 1px solid tomato; */
 }
 
 .hero-title {
@@ -428,22 +423,23 @@ svg {
 
 .work-product .product-name {
     position: absolute;
-    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    left: 0;
     bottom: 0;
-
-    color: var(--white);
-    width: 199px;
-    height: 16px;
-
+    width: 100%;
+    height: 70px;
     font-size: 14px;
     line-height: 1.14;
-    text-align: center;
     letter-spacing: 0.03em;
-    text-transform: uppercase;
 
-    background: rgba(47, 48, 58, 0.8);
-    padding: 27px 85px 27px 85px;
-}
+    text-transform: uppercase;
+    color: var(--white);
+    background-color: rgba(47, 48, 58, 0.8);
+  }
 
 .product-name {
     display: inline-block;
@@ -525,15 +521,18 @@ svg {
 
 .social-team-link {
     display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    justify-content: center;
-    align-items: center;
 }
 
 .social-team-list .social-team-link .social-team-icon {
     fill: var(--title-accent-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-team-list .social-team-link:hover .social-team-icon,
@@ -563,8 +562,11 @@ svg {
     justify-content: center;
     align-items: center;
     border-radius: 4px;
+}
 
+.company-icon {
     fill: var(--blue-gray);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .company-link:hover .company-icon,
@@ -585,17 +587,20 @@ svg {
 }
 
 .site-option .site-option-button {
-    background-color: var(--title-background-color);
-    color: var(--title-text-color);
     font-family: Roboto, sans-serif;
     font-size: 16px;
     line-height: 1.62;
     font-weight: 500;
     border-radius: 4px;
-
     padding: 6px 22px;
     min-width: 73px;
     max-width: 145px;
+
+    background-color: var(--title-background-color);
+    color: var(--title-text-color);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-option .item-button:not(:last-child) {
@@ -657,7 +662,7 @@ svg {
     color: var(--white);
 
     transform: translateY(100%);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item-link:hover .text-combining {
