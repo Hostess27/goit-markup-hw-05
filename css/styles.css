@@ -254,7 +254,6 @@ svg {
     margin-bottom: 9px;
 }
 
-
 .contact .contact-mail-down {
     display: inline-block;
     font-size: 14px;
@@ -439,7 +438,7 @@ svg {
     text-transform: uppercase;
     color: var(--white);
     background-color: rgba(47, 48, 58, 0.8);
-  }
+}
 
 .product-name {
     display: inline-block;
